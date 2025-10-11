@@ -1,0 +1,26 @@
+# Gradle
+.gradle/
+build/
+*/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IntelliJ IDEA/Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VS Code
+.vscode/
+
+# Kotlin/Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+
+
+.kotlin/
