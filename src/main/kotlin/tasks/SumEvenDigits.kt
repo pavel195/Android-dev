@@ -24,7 +24,7 @@ fun sumEvenDigits(input: String): Int {
     // Складываем чётные цифры, игнорируя знак
     return (signAllowed until s.length)
         .asSequence()
-        .map { s[it] - '0' }
+        .map { s[it] - '0' } // вычитается '0' для преобразования символа цифры в числовое значение
         .filter { it % 2 == 0 }
         .sum()
 }
@@ -33,9 +33,10 @@ fun main() {
     // Примеры:
     // Ввод:  -12034
     // Вывод: 6
-    // Ввод:  908
+    // Ввод:  908   
     // Вывод: 8
     try {
+        println("Введите целое число:")
         val line = readLine() ?: throw IllegalArgumentException("Ожидалась строка с числом")
         println(sumEvenDigits(line))
     } catch (e: IllegalArgumentException) {

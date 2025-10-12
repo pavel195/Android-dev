@@ -15,7 +15,7 @@ fun daysInMonth(month: Int, year: Int): Int = when (month) {
     1, 3, 5, 7, 8, 10, 12 -> 31
     4, 6, 9, 11 -> 30
     2 -> if (isLeapYear(year)) 29 else 28
-    else -> throw IllegalArgumentException("Месяц должен быть в диапазоне 1..12")
+    else -> throw IllegalArgumentException("Месяц должен быть в диапазоне 1..12") //Для некорректного месяца выбрасывается исключение.
 }
 
 /** Возвращает дату следующего дня без использования библиотек дат. */
@@ -34,6 +34,7 @@ fun main() {
     // Ввод: 28 2 2024 → Вывод: 29 2 2024 | sameDays=true
     // Ввод: 31 12 2023 → Вывод: 1 1 2024 | sameDays=false
     try {
+        println("Введите дату в формате: dd mm yyyy:")
         val parts = (readLine() ?: error("Ожидалось: dd mm yyyy")).trim().split(" ")
             .filter { it.isNotEmpty() }
         require(parts.size == 3) { "Ожидалось три числа: dd mm yyyy" }

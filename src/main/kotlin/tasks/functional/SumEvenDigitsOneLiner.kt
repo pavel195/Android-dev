@@ -3,17 +3,17 @@ package tasks.functional
 import kotlin.system.exitProcess
 
 /**
- * Однострочное решение: сумма чётных цифр входного целого (в пределах Int).
+ * идиоматичный стиль Kotlin: сумма чётных цифр входного целого (в пределах Int).
  * Условия: без var/mutable/рекурсии; одна цепочка точечных вызовов, включая ввод/вывод.
  */
 fun main() = try {
     // Пример: ввод "-12034" → вывод "6"
     println(
-        (readLine() ?: error("Ожидалась строка"))
-            .trim()
+        (println("Введите целое число:").let { readLine() ?: error("Ожидалась строка") })
+            .trim() // Удаляет пробелы по краям строки.
             .also { require(it.isNotEmpty()) { "Пустая строка недопустима" } }
             .also { s -> s.toIntOrNull() ?: throw IllegalArgumentException("Должно быть целое число в пределах Int") }
-            .filter { it.isDigit() }
+            .filter { it.isDigit() }  //игнорирует знак
             .map { it - '0' }
             .filter { it % 2 == 0 }
             .sum()

@@ -12,6 +12,7 @@ fun main() = try {
     // 0:zero
     // ...
     // Вывод: значения по индексам 0..9
+    println("Введите 10 строк формата индекс:значение (индексы 0..9):")
     generateSequence { readLine() }
         .take(10)
         .map { line ->

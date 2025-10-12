@@ -9,7 +9,7 @@ import kotlin.system.exitProcess
 fun main() = try {
     // Пример: "aa bbb ccc d" → "b"
     println(
-        (readLine() ?: error("Ожидалась строка"))
+        (println("Введите строку слов (через пробелы):").let { readLine() ?: error("Ожидалась строка") })
             .trim()
             .split(" ")
             .filter { it.isNotEmpty() }

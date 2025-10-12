@@ -9,7 +9,7 @@ import kotlin.system.exitProcess
 fun main() = try {
     // Пример: "12 305 -7 80" → предпоследние: 1, 0, (нет), 8 → 1 & 0 & 8 = 0
     println(
-        (readLine() ?: error("Ожидалась строка"))
+        (println("Введите целые числа через пробел:").let { readLine() ?: error("Ожидалась строка") })
             .trim()
             .split(" ")
             .filter { it.isNotEmpty() }

@@ -1,7 +1,7 @@
 import org.gradle.api.tasks.SourceSetContainer
 import org.gradle.kotlin.dsl.register
 import org.gradle.api.tasks.JavaExec
-
+//скрипт сборки Gradle,
 plugins {
     kotlin("jvm") version "2.0.20"
 }

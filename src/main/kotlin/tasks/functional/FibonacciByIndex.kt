@@ -10,7 +10,7 @@ import kotlin.system.exitProcess
 fun main() = try {
     // Примеры: n=0 → 0; n=1 → 1; n=10 → 55
     println(
-        (readLine() ?: error("Ожидалось n"))
+        (println("Введите n (неотрицательное целое):").let { readLine() ?: error("Ожидалось n") })
             .trim()
             .toIntOrNull()
             ?.also { require(it >= 0) { "n должно быть неотрицательным" } }
