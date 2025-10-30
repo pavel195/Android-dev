@@ -12,6 +12,8 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
+    implementation("com.googlecode.lanterna:lanterna:3.1.2")
 }
 
 kotlin {
@@ -45,5 +47,8 @@ registerRunTask("runFABitwiseAndPenultimate", "tasks.functional.BitwiseAndPenult
 registerRunTask("runFATopStudents", "tasks.functional.TopStudentsKt")
 registerRunTask("runFAFibonacci", "tasks.functional.FibonacciByIndexKt")
 registerRunTask("runToStringSafeDemo", "tasks.whenops.ToStringSafeKt")
+registerRunTask("runOopShop", "tasks.oop.shop.app.OopShopAppKt")
+registerRunTask("runTeachersDelegation", "tasks.delegation.teachers.app.TeachersAppKt")
+registerRunTask("runPomodoro", "tasks.coroutines.pomodoro.app.PomodoroAppKt")
 
 
